@@ -44,6 +44,8 @@ class KanaToRomajiTest < Minitest::Test
   end
   
   def test_punctuation
+    assert_equal ",wani.kani!", Wanakana.to_romaji(",ワニ。カニ!"), "allows punctuation converting from katakana"
+    assert_equal ",wani.kani!", Wanakana.to_romaji(",わに。かに!"), "allows punctuation converting from punctuation"
     assert_equal " -.,()“”?!", Wanakana.to_romaji("　ー。、（）「」？！"), "English: space dash period comma parentheses quotes question exclamation"
   end
 end

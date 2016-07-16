@@ -77,6 +77,8 @@ class CharacterConversionTest < Minitest::Test
   end
   
   def test_punctuation
+    assert_equal ",ワニ。カニ!", Wanakana.to_katakana(",わに。かに!"), "allows punctuation converting from hiragana to katakana"
+    assert_equal "、わに。かに！", Wanakana.to_kana(",wani.kani!"), "allows punctuation converting from romaji to kana"
     assert_equal "ー。、（）「」？！", Wanakana.to_kana("-.,()“”?!"), "Japanese: dash period comma parentheses quotes question exclamation"
   end
 end

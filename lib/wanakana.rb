@@ -33,13 +33,13 @@ module Wanakana
 
   def self.is_hiragana?(input)
     chars = input.split('')
-    are_hira = chars.select { |c| is_char_hiragana?(c) }
+    are_hira = chars.select { |c| is_char_hiragana?(c) || c.match(/[\s[:punct:][\uFF01-\uFF5E][\u3000-\u303F]]/) }
     chars.length == are_hira.length
   end
 
   def self.is_katakana?(input)
     chars = input.split('')
-    are_kata = chars.select { |c| is_char_katakana?(c) }
+    are_kata = chars.select { |c| is_char_katakana?(c) || c.match(/[\s[:punct:][\uFF01-\uFF5E][\u3000-\u303F]]/) }
     chars.length == are_kata.length
   end
 
