@@ -10,7 +10,7 @@ This port does not have the methods .bind or .unbind for inputs as WanKana.js do
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'wanakana'
+gem 'Wanakana'
 ```
 
 And then execute:
@@ -19,7 +19,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install wanakana
+    $ gem install Wanakana
 
 ## Usage
 
